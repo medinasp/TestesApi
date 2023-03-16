@@ -26,7 +26,7 @@ namespace Data.Config
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("server=localhost;database=ApiUpExcelTable;uid=root;pwd=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.6.41-mysql"));
+                optionsBuilder.UseMySql("server=localhost;database=ApiTestes;uid=root;pwd=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.6.41-mysql"));
             }
         }
 
