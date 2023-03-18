@@ -21,11 +21,19 @@ namespace WebAPI.Controllers
         }
 
 
+        //[HttpPost("/api/AdicionarProduto")]
+        //public async Task AdicionarProduto([FromBody] Produto produto)
+        //{
+        //    await Task.FromResult(this.IProduto.Add(produto));
+        //}
+
         [HttpPost("/api/AdicionarProduto")]
-        public async Task AdicionarProduto([FromBody] Produto produto)
+        public async Task<IActionResult> AdicionarProduto([FromBody] Produto produto)
         {
-            await Task.FromResult(this.IProduto.Add(produto));
+            await this.IProduto.Add(produto);
+            return Ok();
         }
+
 
         [Produces("application/json")]
         [HttpPut("/api/produtos/{id}")]
