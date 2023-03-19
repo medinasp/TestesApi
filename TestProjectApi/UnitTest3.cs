@@ -15,8 +15,8 @@ namespace TestProjectApi
         [TestMethod]
         public void TestMethod3()
         {
-            var urlApiAdicionarProduto = "https://localhost:7102/api/AdicionarProduto";
-            var produto = new Produto { Nome = "J Coltrane", Imagem = "" };
+            var urlApiAdicionarProduto = "https://localhost:7102/api/DelProd";
+            var produto = new Produto { Id = 4 };
             var responseTask = ChamaApiPost(urlApiAdicionarProduto, produto);
             var response = responseTask.Result;
             Assert.IsTrue(response.StatusCode == HttpStatusCode.OK);
